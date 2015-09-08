@@ -7,6 +7,7 @@ A Ruby wrapper around PVOutput [API](http://pvoutput.org/help.html#api).
 At the time of writing, the PVOutput API consists of the following services.
 
 | Service Name | URL | Implemented |
+| ------------ | --- | ----------- |
 | [Add Output](http://pvoutput.org/help.html#api-addoutput) | http://pvoutput.org/service/r2/addoutput.jsp | no | 
 | [Add Status](http://pvoutput.org/help.html#api-addstatus) | http://pvoutput.org/service/r2/addstatus.jsp | no |
 | [Add Batch Output](http://pvoutput.org/help.html#api-addbatchoutput) | http://pvoutput.org/service/r2/addbatchoutput.jsp | no |
