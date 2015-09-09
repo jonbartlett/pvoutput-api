@@ -5,7 +5,7 @@ require 'pvoutput/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "pvoutput"
-  spec.version       = Pvoutput::VERSION
+  spec.version       = PVOutput::VERSION
   spec.authors       = ["Jon Bartlett"]
   spec.email         = ["mail@jaybe.net <mailto:mail@jaybe.net>"]
 
