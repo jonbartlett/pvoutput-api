@@ -2,6 +2,28 @@
 
 A Ruby wrapper around PVOutput [API](http://pvoutput.org/help.html#api).
 
+Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pvoutput`. To experiment with that code, run `bin/console` for an interactive prompt.
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'pvoutput'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install pvoutput
+
+## Usage
+
+TODO: Write usage instructions here
+
 ## Service Capability
 
 At the time of writing, the PVOutput API consists of the following services.
@@ -44,31 +66,7 @@ It is recommended to make requests at least 10 seconds apart.
 
 * [PVOutput API](http://pvoutput.org/help.html#api)
 
-## FROM GEM CREATION
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pvoutput`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'pvoutput'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install pvoutput
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 
