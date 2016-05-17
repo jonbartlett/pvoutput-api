@@ -3,7 +3,7 @@ require 'rest-client'
 
 module PVOutput
 
-  class GetStatistic
+  class Statistic
 
     attr_reader :energy_generated            # number watt hours 246800
     attr_reader :energy_exported             # number watt hours 246800
@@ -31,30 +31,30 @@ module PVOutput
 
     def initialize(statistics)
       @energy_generated = statistics[:energy_generated]
-      @energy_exported = statistics[:energy_exported]            
-      @average_generation = statistics[:average_generation] 
-      @minimum_generation = statistics[:minimum_generation]         
-      @maximum_generation = statistics[:maximum_generation]         
-      @average_efficiency = statistics[:average_efficiency]         
-      @outputs = statistics[:outputs] 
-      @actual_date_from = statistics[:actual_date_from]           
-      @actual_date_to = statistics[:actual_date_to] 
-      @record_efficiency = statistics[:record_efficiency]          
-      @record_date = statistics[:record_date]                
-      @energy_consumed = statistics[:energy_consumed]            
-      @peak_energy_import = statistics[:peak_energy_import]         
-      @off_peak_energy_import = statistics[:off_peak_energy_import]     
-      @shoulder_energy_import = statistics[:shoulder_energy_import]     
+      @energy_exported = statistics[:energy_exported]
+      @average_generation = statistics[:average_generation]
+      @minimum_generation = statistics[:minimum_generation]
+      @maximum_generation = statistics[:maximum_generation]
+      @average_efficiency = statistics[:average_efficiency]
+      @outputs = statistics[:outputs]
+      @actual_date_from = statistics[:actual_date_from]
+      @actual_date_to = statistics[:actual_date_to]
+      @record_efficiency = statistics[:record_efficiency]
+      @record_date = statistics[:record_date]
+      @energy_consumed = statistics[:energy_consumed]
+      @peak_energy_import = statistics[:peak_energy_import]
+      @off_peak_energy_import = statistics[:off_peak_energy_import]
+      @shoulder_energy_import = statistics[:shoulder_energy_import]
       @high_shoulder_energy_import =statistics[:high_shoulder_energy_import]
-      @average_consumption = statistics[:average_consumption]        
-      @minimum_consumption = statistics[:minimum_consumption]        
-      @maximum_consumption = statistics[:maximum_consumption]        
-      @credit_amount = statistics[:credit_amount] 
-      @debit_amount = statistics[:debit_amount] 
+      @average_consumption = statistics[:average_consumption]
+      @minimum_consumption = statistics[:minimum_consumption]
+      @maximum_consumption = statistics[:maximum_consumption]
+      @credit_amount = statistics[:credit_amount]
+      @debit_amount = statistics[:debit_amount]
     end
 
-    def self.do (date_from, date_to, auth_details)
-    
+    def self.fetch (date_from, date_to, auth_details)
+
       # hit api and return csv data in array
       data = RestClient.get(API_URL, {:params => {:sid => auth_details.system_id, :key => auth_details.api_key, :df => date_from, :dt => date_to, :c => '1', :crdr => '1'}})
       results = CSV.new(data).to_a
