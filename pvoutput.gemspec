@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jon Bartlett"]
   spec.email         = ["mail@jaybe.net <mailto:mail@jaybe.net>"]
 
-  spec.summary       = %q{Gem to wrap PVOutput.org API}
+  spec.summary       = %q{pvoutput}
   spec.description   = %q{Gem to wrap PVOutput.org API}
   spec.homepage      = "https://github.com/jonbartlett/pvoutput"
   spec.license       = "MIT"
