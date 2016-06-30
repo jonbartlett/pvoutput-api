@@ -1,5 +1,7 @@
 # pvoutput-api
 
+[![Build Status](https://travis-ci.org/jonbartlett/pvoutput-api.svg?branch=master)](https://travis-ci.org/jonbartlett/pvoutput-api)
+
 A Ruby wrapper around PVOutput [API](http://pvoutput.org/help.html#api).
 
 Update 30/06/2016: Since working on this over a year ago another similar project has sprung up (see [https://github.com/johnf/pvoutput](https://github.com/johnf/pvoutput)). There is currently no overlap in functionality so I decided to publish the Gem anyway. In the longterm these projects should probably merge.
