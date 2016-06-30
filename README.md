@@ -2,9 +2,9 @@
 
 A Ruby wrapper around PVOutput [API](http://pvoutput.org/help.html#api).
 
-See also [pvoutput-qif](https://github.com/jonbartlett/pvoutput-qif).
+Update 30/06/2016: Since working on this over a year ago another similar project has sprung up (see [https://github.com/johnf/pvoutput](https://github.com/johnf/pvoutput)). There is currently no overlap in functionality so I decided to publish the Gem anyway. In the longterm these projects should probably merge.
 
-Update 30/06/2016: Since working on this over a year ago another similar project has sprung up (see [https://github.com/johnf/pvoutput](https://github.com/johnf/pvoutput). There is currently no overlap in functionality so I decided to publish the Gem anyway. In the longterm these projects should probably merge.
+See also related project [pvoutput-qif](https://github.com/jonbartlett/pvoutput-qif).
 
 ## Installation
 
