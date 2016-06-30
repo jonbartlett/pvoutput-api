@@ -1,3 +1,3 @@
-require './lib/pvoutput/auth'
-require './lib/pvoutput/statistic'
-require './lib/pvoutput/version'
+require_relative 'pvoutput/auth'
+require_relative 'pvoutput/statistic'
+require_relative 'pvoutput/version'
