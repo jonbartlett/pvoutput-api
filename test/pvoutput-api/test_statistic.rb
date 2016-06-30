@@ -1,5 +1,5 @@
 require './test/test_helper'
-require './lib/pvoutput'
+require './lib/pvoutput-api'
 
 class PVOutputStatisticTest < MiniTest::Test
   def setup

@@ -1,5 +1,5 @@
 require './test/test_helper'
-require './lib/pvoutput/auth'
+require './lib/pvoutput-api/auth'
 
 class PVOutputAuthTest < MiniTest::Test
   def setup
@@ -11,7 +11,7 @@ class PVOutputAuthTest < MiniTest::Test
   end
 
   def test_class_instantiated
-    assert_instance_of PVOutput::Auth, @auth 
+    assert_instance_of PVOutput::Auth, @auth
   end
 
 end
