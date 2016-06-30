@@ -1,7 +1,5 @@
-require 'pry'
 require './test/test_helper'
-require './lib/pvoutput/statistic'
-require './lib/pvoutput/auth'
+require './lib/pvoutput'
 
 class PVOutputStatisticTest < MiniTest::Test
   def setup
@@ -9,19 +7,19 @@ class PVOutputStatisticTest < MiniTest::Test
   end
 
   def test_exists
-    assert PVOutput::Statistic 
+    assert PVOutput::Statistic
   end
 
   def test_class_instantiated
     @statistic = PVOutput::Statistic.new({})
-    assert_instance_of PVOutput::Statistic, @statistic 
+    assert_instance_of PVOutput::Statistic, @statistic
   end
 
   def test_api_returns_data
     VCR.use_cassette('one_statistic') do
       stat_data = PVOutput::Statistic.fetch("20150622", "20150622", @pvo_auth)
       assert_equal PVOutput::Statistic, stat_data.class
-      
+
       # check that fields accessible
       assert_equal "34651", stat_data.energy_consumed
       assert_equal "9.61", stat_data.debit_amount
