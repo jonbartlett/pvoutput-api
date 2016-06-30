@@ -2,25 +2,36 @@
 
 A Ruby wrapper around PVOutput [API](http://pvoutput.org/help.html#api).
 
+See also [pvoutput-qif](https://github.com/jonbartlett/pvoutput-qif).
+
+Update 30/06/2016: Since working on this over a year ago another similar project has sprung up (see [https://github.com/johnf/pvoutput](https://github.com/johnf/pvoutput). There is currently no overlap in functionality so I decided to publish the Gem anyway. In the longterm these projects should probably merge.
+
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'pvoutput'
+gem 'pvoutput-api'
 ```
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
-    $ gem install pvoutput
+    $ gem install pvoutput-api
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+require 'pvoutput-api'
+
+pvo_auth = PVOutput::Auth.new('8313', 'secret')
+stat_data = PVOutput::Statistic.fetch("20150622", "20150622", pvo_auth)
+puts stat_data.debit_amount
+puts stat_data.energy_consumed
+```
 
 ## Service Capability
 
@@ -64,18 +75,27 @@ It is recommended to make requests at least 10 seconds apart.
 
 * [PVOutput API](http://pvoutput.org/help.html#api)
 
+## Unit Tests
 
-## Development
+Tests can be run using:
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
+```rake test```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+or with [Guard](https://github.com/guard/guard)
 
-Test using ```rake test``` or use [Gaurd](https://github.com/guard/guard).
+```bundle exec guard```
+
+## Debugging Issue
+
+Raise an issue via [Github](https://github.com/jonbartlett/pvoutput-api/issues). If the issue is related to the PVOutput API call, enable logging with the following environment variable:
+
+```RESTCLIENT_LOG=stdout```
+
+Copy and paste the exact output into the Issue.
 
 ## Contributing
 
-1. Fork it ( https://github.com/jonbartlett/pvoutput/fork )
+1. Fork it ( https://github.com/jonbartlett/pvoutput-api/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
