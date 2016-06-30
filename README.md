@@ -1,4 +1,4 @@
-# PVOutput
+# pvoutput-api
 
 A Ruby wrapper around PVOutput [API](http://pvoutput.org/help.html#api).
 
