@@ -2,7 +2,7 @@
 # More info at https://github.com/guard/guard#readme
 
 ## Uncomment and set this to only include directories you want to watch
-directories %w(lib test)
+#directories %w(lib test)
 
 ## Uncomment to clear the screen before every task
 clearing :on
@@ -24,6 +24,9 @@ clearing :on
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
 
 guard :minitest do
+
+  watch("Guardfile")
+
   # with Minitest::Unit
   watch(%r{^test/(.*)\/?test_(.*)\.rb$})
   watch(%r{^lib/(.*/)?([^/]+)\.rb$})     { 'test' }
@@ -50,7 +53,7 @@ guard :minitest do
   # watch(%r{^app/models/(.*)\.rb$})      { |m| "test/unit/#{m[1]}_test.rb" }
 end
 
-# Notifications 
+# Notifications
 #   via tmux https://github.com/guard/guard/wiki/System-notifications#tmux
 notification :tmux,
   display_message: true,
@@ -60,13 +63,15 @@ notification :tmux,
   # Alternately you can also configure *success_message_format*,
   #  *pending_message_format*, *failed_message_format*
   line_separator: ' > ', # since we are single line we need a separator
-  color_location: 'status-left-bg', # to customize which tmux element will change color
-  
+
+  #  commented out below as always leave this location with this colour
+#  color_location: 'status-left-bg', # to customize which tmux element will change color
+
   # Other options:
   default_message_color: 'black',
   success: 'colour150',
   failure: 'colour174',
   pending: 'colour179',
-  
+
   # Notify on all tmux clients
   display_on_all_clients: false
