@@ -64,8 +64,8 @@ notification :tmux,
   #  *pending_message_format*, *failed_message_format*
   line_separator: ' > ', # since we are single line we need a separator
 
-  #  commented out below as always leave this location with this colour
-#  color_location: 'status-left-bg', # to customize which tmux element will change color
+  change_color: false,
+  color_location: 'status-left-bg', # to customize which tmux element will change color
 
   # Other options:
   default_message_color: 'black',
