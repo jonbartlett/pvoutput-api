@@ -1,13 +1,9 @@
 # pvoutput-api
 
 [![Build Status](https://travis-ci.org/jonbartlett/pvoutput-api.svg?branch=master)](https://travis-ci.org/jonbartlett/pvoutput-api)
-
 [![Gem Version](https://badge.fury.io/rb/pvoutput-api.svg)](https://rubygems.org/gems/pvoutput-api)
-
 [![Gem Downloads](http://ruby-gem-downloads-badge.herokuapp.com/pvoutput-api)](https://rubygems.org/gems/pvoutput-api)
-
 [![Code Climate](https://codeclimate.com/github/jonbartlett/pvoutput-api/badges/gpa.svg)](https://codeclimate.com/github/jonbartlett/pvoutput-api)
-
 [![Test Coverage](https://codeclimate.com/github/jonbartlett/pvoutput-api/badges/coverage.svg)](https://codeclimate.com/github/jonbartlett/pvoutput-api/coverage)
 
 A Ruby wrapper around PVOutput [API](http://pvoutput.org/help.html#api).
