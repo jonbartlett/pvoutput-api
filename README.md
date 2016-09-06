@@ -2,9 +2,17 @@
 
 [![Build Status](https://travis-ci.org/jonbartlett/pvoutput-api.svg?branch=master)](https://travis-ci.org/jonbartlett/pvoutput-api)
 
+[![Gem Version](https://badge.fury.io/rb/pvoutput-api.svg)](https://rubygems.org/gems/pvoutput-api)
+
+[![Gem Downloads](http://ruby-gem-downloads-badge.herokuapp.com/pvoutput-api)](https://rubygems.org/gems/pvoutput-api)
+
+[![Code Climate](https://codeclimate.com/github/jonbartlett/pvoutput-api/badges/gpa.svg)](https://codeclimate.com/github/jonbartlett/pvoutput-api)
+
+[![Test Coverage](https://codeclimate.com/github/jonbartlett/pvoutput-api/badges/coverage.svg)](https://codeclimate.com/github/jonbartlett/pvoutput-api/coverage)
+
 A Ruby wrapper around PVOutput [API](http://pvoutput.org/help.html#api).
 
-Update 30/06/2016: Since working on this over a year ago another similar project has sprung up (see [https://github.com/johnf/pvoutput](https://github.com/johnf/pvoutput)). There is currently no overlap in functionality so I decided to publish the Gem anyway. In the longterm these projects should probably merge.
+*Update 30/06/2016* Since working on this over a year ago another similar project has sprung up (see [https://github.com/johnf/pvoutput](https://github.com/johnf/pvoutput)). There is currently no overlap in functionality so I decided to publish the Gem anyway. In the longterm these projects should probably merge.
 
 See also related project [pvoutput-qif](https://github.com/jonbartlett/pvoutput-qif).
 
